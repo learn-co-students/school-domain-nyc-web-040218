@@ -24,6 +24,9 @@ class School
   end
 
   def sort
-    @roster.sort_by {|k, v| k}.to_h
+    @roster.each do |grade, student_arr|
+      student_arr.sort!
+    end
   end
+  @roster
 end
